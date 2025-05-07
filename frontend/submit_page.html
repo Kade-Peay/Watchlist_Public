@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <template id="topnav"></template>
+
+    <div id="form_container">
+        <input placeholder="Title" type="text" id="title" class="input"/>
+        <select id="genre" class="input">
+            <option value="" disabled selected>Choose Genre</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime/Mystery">Crime/Mystery</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Historical">Historical</option>
+            <option value="Horror">Horror</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Isekai">Isekai</option>
+          </select>
+                  <form id="mediaForm">
+          <label for="movie">Movie</label>
+          <input type="radio" id="movie" name="media" value="Movie">
+          <br>
+          <label for="tv">TV</label>
+          <input type="radio" id="tv" name="media" value="TV">
+        </form>
+        <label for="urgent">Urgency (1-5)</label>
+        <input placeholder="1-5" type="number" id="urgent" class="input" min="1" max="5"/>
+    </div>
+
+    <div id="button_container">
+        <button id="submit" > SUBMIT </button>
+    </div>
+    
+    
+    <script type="module" src="navbar.js"></script>
+    <script type="module" src="submitPage.js"></script>
+</body>
+
+
+</html>

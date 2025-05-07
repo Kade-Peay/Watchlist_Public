@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watched List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <template id="topnav"></template>
+
+    <div class="order-container">
+        <div class="order-controls">
+        <label for="orderSelect">Order by:</label>  
+        <select id="orderSelect">
+            <option value="Date">Date</option>
+            <option value="Title">Title</option>
+            <option value="Rating">Rating</option>
+            <option value="Movie or TV">Movie or TV</option>
+            <option value="Genre">Genre</option>
+        </select>
+        <button id="orderButton" class="button">Apply</button>
+        </div>
+        <input type="text" id="searchBar"  class="input" placeholder="Search...">
+    </div>
+
+    <ol id="dataList"></ol>
+
+    <!-- Update Modal -->
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="updateClose">&times;</span>
+            <h2>Update Show</h2>
+            <form id="updateForm">
+                <label for="updateGenre">Genre:</label>
+                <input type="text" id="updateGenre" name="genre" class="input"><br>
+                <label for="updateTitle">Title:</label>
+                <input type="text" id="updateTitle" name="title" class="input"><br>
+                <label for="updateMovieOrTV">Movie or TV:</label>
+                <input type="text" id="updateMovieOrTV" name="movieOrTV" class="input"><br>
+                <label for="updateRating">Rating:</label>
+                <input type="number" id="updateRating" name="rating" class="input" min="1" max="5"><br>
+                <button type="button" id="updateButton" class="button updateButton">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="deleteClose">&times;</span>
+            <h2>Are you sure you want to delete this show?</h2>
+            <button id="confirmDelete" class="button deleteButton">Yes, delete</button>
+            <button id="cancelDelete" class="button">Cancel</button>
+        </div>
+    </div>
+
+
+    <script type="module" src="navbar.js"></script>
+    <script type="module" src="watchedList.js"></script>
+</body>
+</html>
